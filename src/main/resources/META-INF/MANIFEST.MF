@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: main.Main
+Class-Path: spring-expression-5.1.9.RELEASE.jar mysql-connector-java-8.0
+ .15.jar spring-core-5.1.9.RELEASE.jar spring-context-5.1.9.RELEASE.jar 
+ jbcrypt-0.4.jar spring-aop-5.1.9.RELEASE.jar spring-jdbc-5.1.9.RELEASE.
+ jar spring-tx-5.1.9.RELEASE.jar protobuf-java-3.6.1.jar spring-jcl-5.1.
+ 9.RELEASE.jar spring-beans-5.1.9.RELEASE.jar bcprov-jdk15on-1.63.jar
+

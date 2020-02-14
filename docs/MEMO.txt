@@ -1,0 +1,27 @@
+*----------------------------------------------------------------------------------------------------------------------*
++ 계정 테이블
+- 암호화를 고려하여 비밀번호는 60자를 사용한다.
+
+CREATE DATABASE ex_encryption;
+USE ex_encryption;
+
+CREATE TABLE user
+(
+    `id`        BIGINT  NOT NULL  AUTO_INCREMENT,
+    `email`     VARCHAR(30)  NOT NULL,
+    `password`  VARCHAR(60)  NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_user_email (email)
+);
+
+INSERT INTO user(email, password) VALUES ('dummy', '12345');
+*----------------------------------------------------------------------------------------------------------------------*
+
+[!] IntelliJ; 실행 가능한 Jar 파일 생성 시 'xxx.jar에 기본 Manifest 속성이 없습니다.
+-> 자동으로 생성되는 'META-INF/MANIFEST.MF' 파일을
+   java 디렉토리가 아니라 resources 디렉토리로 설정을 해야 한다.
+   (File -> Project Structure -> Artifacts -> JAR -> From modules with dependencies...
+   -> Main Class -> main.Main 지정,
+   -> copy to the output directory and link vai manifest 체크
+   -> MANIFEST 위치를 resources 디렉토리 지정)
+   (JAR 생성은 Build -> Build Artifacts)
